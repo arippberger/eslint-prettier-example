@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   check-format:
+    name: Check Code Formatting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,6 +18,7 @@ jobs:
         run: npm run format:check
 
   check-lint:
+    name: Lint Code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

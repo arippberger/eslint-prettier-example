@@ -13,11 +13,10 @@ jobs:
           node-version: "20"
       - name: Install Dependencies
         run: npm install
-      - name: Check Format
+      - name: Format Check
         run: npm run format:check
 
   check-lint:
-    needs: check-format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
